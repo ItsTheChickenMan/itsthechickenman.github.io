@@ -3,28 +3,29 @@
   <title>This Page Exists</title>
   <link rel='icon' href='favicon.ico' type='image/x-icon'/ >
   <style>
+    .title {
+	position: absolute;
+	font-size: 30px;
+    }
     #title {
-      color: red;
-      text-align: center;
+      	color: red;
+      	text-align: center;
     }
     #logo {
-      position: absolute;
-      right: 75px;
+      	position: absolute;
+      	right: 75px;
     }
     #gms {
-  	  position: absolute;
-      top: 105px;
-      left: 60px;
+      	top: 105px;
+      	left: 60px;
     }
     #prj {
-	  position: absolute;
-      top: 105px;
-      left: 750px;
+      	top: 105px;
+      	left: 750px;
     }
-	  #misc {
-      position: absolute;
-      top: 500px;
-      left: 60px;
+    #misc {
+      	top: 500px;
+      	left: 60px;
     }
   </style>
 </head>
@@ -33,9 +34,12 @@
   <img src="logop.png" alt="Chicken Man" id="logo" title="What has my life come to">
   <p style="text-align: center">Thanks for showing up</p>
   
-  <h2 id="gms">Games</h2>
-  
-  <h2 id="prj">Projects</h2>
-  
-  <h2 id="misc">Misc.</h2>
+  <h2 class="title" id="gms">Games</h2>
+  <div class="gmbox">
+  	
+  </div>
+  <h2 class="title" id="prj">Projects</h2>
+  <div class="prjbox">
+  </div>
+  <h2 class="title" id="misc">Misc.</h2>
 </body>
