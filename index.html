@@ -1,45 +1,56 @@
 <!DOCTYPE html>
-<head>
-  <title>This Page Exists</title>
-  <link rel='icon' href='favicon.ico' type='image/x-icon'/ >
-  <style>
-    .title {
-	position: absolute;
-	font-size: 30px;
-    }
-    #title {
-      	color: red;
-      	text-align: center;
-    }
-    #logo {
-      	position: absolute;
-      	right: 75px;
-    }
-    #gms {
-      	top: 105px;
-      	left: 60px;
-    }
-    #prj {
-      	top: 105px;
-      	left: 750px;
-    }
-    #misc {
-      	top: 500px;
-      	left: 60px;
-    }
-  </style>
-</head>
-<body>
-  <h1 id="title">It's The Chicken Man ('s website)</h1>
-  <img src="logop.png" alt="Chicken Man" id="logo" title="What has my life come to">
-  <p style="text-align: center">Thanks for showing up</p>
-  
-  <h2 class="title" id="gms">Games</h2>
-  <div class="gmbox">
-  	
-  </div>
-  <h2 class="title" id="prj">Projects</h2>
-  <div class="prjbox">
-  </div>
-  <h2 class="title" id="misc">Misc.</h2>
-</body>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>This Page Exists</title>
+        <style>
+            body {
+                font-family: monospace;
+            }
+            h1 {
+                font-size: 240%;
+            }
+            p {
+                font-size: 115%;
+            }
+            h2 {
+                margin-left: 10px;
+                font-size: 175%;
+            }
+            .seg {
+                display: block;
+            }
+            .box {
+                float: left;
+                margin: 10px;
+                border: 2px solid gray;
+                width: 400px;
+                padding: 15px;
+            }
+            .box h3 {
+                margin: 0px 0px 2px;
+                font-size: 135%;
+            }
+            .box img {
+                float: left;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align: center; color: red">It's The Chicken Man ('s Website)</h1>
+        <p style="text-align: center;">Thanks for showing up</p>
+        
+        <h2>Projects</h2>
+        <div class="seg">
+            <div class="box">
+                <h3><a href="#">Brainfuck Stuff</a></h3>
+                <p>A compilation of my Brainfuck projects/programs</p>
+            </div>
+            <div class="box">
+                <h3><a href="#">GoGuardian Conquistador</a></h3>
+                <p>A project to disable GoGuardian (obviously)</p>
+            </div>
+        </div>
+    </body>
+</html>
