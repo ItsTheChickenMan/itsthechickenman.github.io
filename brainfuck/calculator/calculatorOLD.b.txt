@@ -1,0 +1,18 @@
+>>>>>>>>>>>>>>>>>>>>>>>>+[-<<<<,[>>>+>+<<<<-]>+++++++[>>------<<-]>>-[>>+<<[-]]>[<<<<+>>>>-]>]<<<<<++++>,[>,]--
+<[------------------------------------------------<]<[------------------------------------------------<]  
+>++[-->++]--<[ [+[-<+]-<+++[-->++]--<-] <+[-<+]- <[++[-->++]-->+<<+[-<+]-<-] >>[[<+>-]>] >[<+>-]<<<]
+>>[<++++++++[>++++++<-]>.>>]
+
+
+
+
+[
+A Simple Brainf*ck Calculator  
+
+*It can only use addition
+*The number with the highest digits has to be the second addend
+*Don't use numbers that are more than 22 digits apart (it crashes the program)
+*Don't use digits that add up to ten (19 and 18 crashes program because 9+8 = >10)
+
+Made by Phoenix during a boring week in school
+]
