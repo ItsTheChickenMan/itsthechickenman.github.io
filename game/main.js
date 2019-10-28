@@ -1,4 +1,3 @@
 var x = document.createElement("H1");
-var text = document.createTextNode("HI");
-x.appendChild(text);
+x.innerHTML = "HI";
 document.body.appendChild(x);
