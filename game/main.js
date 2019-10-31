@@ -7,4 +7,4 @@ lockMouse = function(){
   var sty = document.getElementByTagName("style");
   sty.innerHTML = "html { cursor: none; }";
 }
-clickerListener.onclick = lockMouse();
+clickListener.onclick = lockMouse();
