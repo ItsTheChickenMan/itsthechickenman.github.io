@@ -4,7 +4,7 @@ function lockMouse(e) {
   img.src = "cursor.png";
   img.x = e.clientX;
   img.y = e.clientY;
-  var sty = document.getElementByTagName("style");
+  var sty = document.getElementsByTagName("style");
   sty.innerHTML = "html { cursor: none; }";
 }
 document.addEventListener("click", lockMouse);
