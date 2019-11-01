@@ -1,5 +1,5 @@
 function lockMouse(e) {
-  var img = document.createElement("image");
+  var img = document.createElement("img");
   img.src = "cursor.png";
   img.style = "position: absolute; left: " + e.clientX + "px; up: " + e.clientY + "px;";
   document.getElementById("body").appendChild(img);
