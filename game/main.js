@@ -1,3 +1,13 @@
+var locked = false;
+
+function handler(e) {
+  if(locked == false){
+ 	lockMouse(e);
+  } else {
+	unlockMouse(e);
+  }
+}
+
 function lockMouse(e) {
   var img = document.createElement("img");
   img.src = "cursor.png";
@@ -7,6 +17,11 @@ function lockMouse(e) {
   sty.innerHTML = `html {
 	                  cursor: none;
                    }`;
+  locked = true;
 }
-document.addEventListener("click", lockMouse);
+
+function unlockMouse(e){
+	
+}
+document.addEventListener("click", handler);
 //Hi yes I am depression
