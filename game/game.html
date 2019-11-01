@@ -6,7 +6,19 @@
     </style>
   </head>
   <body id="body">
-    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript">
+      function lockMouse(e) {
+      var img = document.createElement("image");
+      img.src = "cursor.png";
+      img.style = "position: absolute; left: " + e.clientX + "px; up: " + e.clientY + "px;";
+      document.getElementById("body").appendChild(img);
+      var sty = document.getElementById("sty");
+      sty.innerHTML = `html {
+	                      cursor: none;
+                       }`;
+      }
+      document.addEventListener("click", lockMouse);
+    </script>
     <h1 style="text-align: center">Click anywhere to lock/unlock mouse <img style="display: inline;" src="cursor.png"> (experiment) have fun</h1>
   </body>
 </html>
