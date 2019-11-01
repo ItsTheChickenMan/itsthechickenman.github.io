@@ -8,7 +8,5 @@ function lockMouse(e) {
 	                  cursor: none;
                    }`;
 }
-document.addEventListener("click", function() {
-	lockMouse("click"))
-});
+document.addEventListener("click", lockMouse);
 
