@@ -4,9 +4,9 @@ function lockMouse(e) {
   img.style = "position: absolute; left: " + e.x + "; up: " + e.y + ";";
   document.getElementById("body").appendChild(img);
   var sty = document.getElementById("sty");
-  sty.innerHTML = "html {
+  sty.innerHTML = `html {
 	                  cursor: none;
-                   }";
+                   }`;
 }
 document.addEventListener("click", lockMouse);
 
