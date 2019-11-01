@@ -9,6 +9,6 @@ function lockMouse(e) {
                    }`;
 }
 document.addEventListener("click", function() {
-	lockMouse(this))
+	lockMouse("click"))
 });
 
