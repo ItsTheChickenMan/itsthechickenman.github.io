@@ -9,4 +9,4 @@ function lockMouse(e) {
                    }`;
 }
 document.addEventListener("click", lockMouse);
-
+//Hi yes I am depression
