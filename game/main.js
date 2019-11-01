@@ -8,5 +8,5 @@ function lockMouse(e) {
 	                  cursor: none;
                    }`;
 }
-document.addEventListener("click", lockMouse);
+document.addEventListener("click", lockMouse());
 
