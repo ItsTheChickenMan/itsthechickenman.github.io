@@ -26,6 +26,7 @@ function unlockMouse(e){
    sty.innerHTML = "";
    var img = document.getElementById("swear word XD");
    img.remove();
+   locked = false;
 }
 document.addEventListener("click", handler);
 //Hi yes I am depression
