@@ -10,6 +10,7 @@ function handler(e) {
 
 function lockMouse(e) {
   var img = document.createElement("img");
+  img.id = "swear word XD";
   img.src = "cursor.png";
   img.style = "position: absolute; left: " + e.clientX + "px; top: " + e.clientY + "px;";
   document.getElementById("body").appendChild(img);
@@ -21,7 +22,10 @@ function lockMouse(e) {
 }
 
 function unlockMouse(e){
-	
+   var sty = document.getElementById("sty");
+   sty.innerHTML = "";
+   var img = document.getElementById("swear word XD");
+   img.body.removeElement(img);
 }
 document.addEventListener("click", handler);
 //Hi yes I am depression
