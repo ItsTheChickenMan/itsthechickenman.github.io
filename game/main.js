@@ -11,7 +11,7 @@ function handler(e) {
 function lockMouse(e) {
   var img = document.createElement("img");
   img.src = "cursor.png";
-  img.style = "position: absolute; left: " + e.clientX + "px; up: " + e.clientY + "px;";
+  img.style = "position: absolute; left: " + e.clientX + "px; top: " + e.clientY + "px;";
   document.getElementById("body").appendChild(img);
   var sty = document.getElementById("sty");
   sty.innerHTML = `html {
