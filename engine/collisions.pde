@@ -136,6 +136,11 @@ var game = function(){
     drawObject("obj", 50, 273, 30, 30, 0, [0, 0, 0]);
 }
 
+void setup(){
+  size( 400, 400 );
+  frameRate( 60 );
+}
+
 draw = function() {
     try {  
         game();
