@@ -1,4 +1,5 @@
-// A basic "platformer" engine
+// A basic "platformer" engine (neato)
+// TODO: Fix collisions so that it prioritizes based on currnt key being pressed
 // Documentation below:
 
 
