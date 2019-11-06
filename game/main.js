@@ -17,6 +17,9 @@ function lockMouse(e) {
   var sty = document.getElementById("sty");
   sty.innerHTML = `html {
 	                  cursor: none;
+                   }
+		   a: hover {
+                   	  cursor: none;
                    }`;
   locked = true;
 }
@@ -29,4 +32,3 @@ function unlockMouse(e){
    locked = false;
 }
 document.addEventListener("click", handler);
-//Hi yes I am depression
