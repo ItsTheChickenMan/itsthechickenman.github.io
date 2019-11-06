@@ -134,6 +134,8 @@ var game = function(){
 {
     drawObject("ground", 0, 380, 401, 20, 0, [0, 0, 0]);
     drawObject("obj", 50, 273, 30, 30, 0, [0, 0, 0]);
+    drawObject("large", 200, 100, 65, 65, 10, [0, 0, 255]);
+    drawObject("small", 40, 40, 10, 10, 0, [0, 255, 0]);
 }
 
 void setup(){
@@ -141,7 +143,7 @@ void setup(){
   frameRate( 60 );
 }
 
-draw = function() {
+void draw() {
     try {  
         game();
     } catch(e) {
