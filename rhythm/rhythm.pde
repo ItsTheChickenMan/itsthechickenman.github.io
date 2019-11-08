@@ -187,8 +187,7 @@ void setup() {
   frameRate(60);
   size( 400, 400 );
 }
-//Ah, yes.  The draw() function.  The apple of the eye of Processing, the thing that seperates Processing from just another event-based, javascript-like programming language.  This is, of course, where the game() function is efficiently recalled at 60 executions per second.  Enjoy.
-//Also, I guess I owe some credit to Kruxe for giving me the idea to use a seperate function in a try{}catch(){} than to just plop everything into draw() and deal with Oh Nose
+//Ah, yes.  The draw() function.  The apple of the eye of Processing, the thing that seperates it from just another event-based, javascript-like programming language.  This is, of course, where the game() function is efficiently recalled at 60 executions per second.  Enjoy.
 void draw () {
     try {
         game();
