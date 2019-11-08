@@ -160,7 +160,7 @@ var game = function(){
 };
 
 void setup() {
-  fps(60);
+  frameRate(60);
   size( 400, 400 );
 }
 //Ah, yes.  The draw() function.  The apple of the eye of Processing, the thing that seperates Processing from just another event-based, javascript-like programming language.  This is, of course, where the game() function is efficiently recalled at 60 executions per second.  Enjoy.
