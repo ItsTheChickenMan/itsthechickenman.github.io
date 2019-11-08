@@ -81,22 +81,46 @@ var drawPlayer = function(x, y, color){
 var currentBeat = 0;
 var pos = -300;    //If you want a delay at the start, change this 
 var level = function(levelData){
-    if(pos >= 200){
+    if(pos >= 200 && smoooth > 0){
         if(playerPhase !== levelData[currentBeat][1]){
-            smoooth -= 3;
-        }
-        if(pcolor !== levelData[currentBeat][2]){
+            smoooth -= 5;
+        } else if(pcolor !== levelData[currentBeat][2]){
             smoooth -= 2;
         }
         currentBeat++;
         pos = 0 - levelData[currentBeat - 1][3];
     }
-    if(currentBeat !== levelData.length){
+    if(currentBeat !== levelData.length && smoooth > 0){
         drawBeat(pos, levelData[currentBeat][1], levelData[currentBeat][2]);
         pos += levelData[currentBeat][0];
+    } else if(smoooth <= 0){
+        print("[");
+        for(var i = 0; i < level1.length; i++){
+            print("[");
+            for(var c = 0; c < 4; c++){
+                print(level1[i][c]);
+                if(c === 3){}else {print(",");}
+            }
+            print("]");
+            if(i === level1.length - 1){}else{print(",");}
+        }
+        print("]");
+        println("YOU LOSE!  Here's the data, if you want to try again.");
+        println("Just paste it into level1 at the top of the code.");
+        levelEnd = 1;
     } else {
-        println("You won!  Level data below:");
-        println(level1);
+        print("[");
+        for(var i = 0; i < level1.length; i++){
+            print("[");
+            for(var c = 0; c < 4; c++){
+                print(level1[i][c]);
+                if(c === 3){}else {print(",");}
+            }
+            print("]");
+            if(i === level1.length - 1){}else{print(",");}
+        }
+        print("]");
+        println("You won!  Level data above");
         levelEnd = 1;
     }
 };
