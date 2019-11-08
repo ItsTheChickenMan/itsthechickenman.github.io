@@ -60,7 +60,7 @@ var drawBeat = function(init, phase, color){
         phs[2] = -22.5;
     }
     stroke(col[color - 1][0],col[color - 1][1], col[color - 1][2]);
-    arc(xy[phase + 1], xy[phase - 1], 200, 200, phs[phase - 1], phs[phase]);
+    arc(xy[phase + 1], xy[phase - 1], 200, 200, radians(phs[phase - 1]), radians(phs[phase]));
     strokeWeight(1);
 };
 
