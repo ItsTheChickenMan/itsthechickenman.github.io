@@ -30,7 +30,7 @@
 
 var keys = [];
 var player = [175, 30, "idle", 30, 10];   //0 - player x; 1 - player y; 2- playerState;  3- size;  4- jump force 
-var objData = [[-25, 0, 25, 400, 0, [0, 0, 0]], [400, 0, 1, 400, 0, [0, 0, 0]], [0, -25, 400, 25, 0, [0, 0, 0]]];
+var objData = [[-25, -25, 25, 425, 0, [0, 0, 0]], [400, 0, 1, 400, 0, [0, 0, 0]], [-25, -25, 425, 25, 0, [0, 0, 0]]];
 
 void keyPressed(){keys[keyCode] = true;};
 void keyReleased(){keys[keyCode] = false;};
