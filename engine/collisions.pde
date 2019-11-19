@@ -136,7 +136,7 @@ var game = function(){
     drawObject("obj", 50, 273, 30, 30, 0, [0, 0, 0]);
     drawObject("large", 200, 100, 65, 65, 10, [0, 0, 255]);
     drawObject("small", 40, 40, 10, 10, 0, [0, 255, 0]);
-    drawObject("groundObj", 100, 340, 40, 40, 0, [0, 0, 0]);  
+    drawObject("groundObj", 200, 340, 40, 40, 0, [0, 0, 0]);  
 }
 
 void setup(){
