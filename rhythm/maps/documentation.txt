@@ -1,0 +1,7 @@
+Neatmap Documentation:
+
+[speed, phase, color, delayBeforeNextBeat]
+
+OR
+
+[speed, phase, color, "r", howManyBeatsToRepeat, howManyTimes]
