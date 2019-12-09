@@ -4,7 +4,11 @@ The actually game will be in Java, and then ported to a Raspberry Pi, but I deci
 Processing because it's so easy to create graphics.
 */
 
-/* @pjs preload="assets/character.png"; */
+/* @pjs preload="assets/characterNeutral.png"; */
+/* @pjs preload="assets/characterRed.png";     */
+/* @pjs preload="assets/characterBlue.png";    */
+/* @pjs preload="assets/characterGreen.png";   */
+/* @pjs preload="assets/characterYellow.png";  */
 
 //I don't have everything perfectly annotated, just bear with me for a little while :P
 //Have fun scrolling through and stuff
@@ -13,8 +17,11 @@ PImage character[];
 void setup() {
   frameRate(60);
   size( 400, 400 );
-  character[0] = loadImage("assets/character.png");
-  character[1] = loadImage("assets/charcater.png");
+  character[0] = loadImage("assets/characterNeutral.png");
+  character[1] = loadImage("assets/characterRed.png");
+  character[2] = loadImage("assets/characterGreen.png");
+  character[3] = loadImage("assets/characterBlue.png");
+  character[4] = loadImage("assets/characterYellow.png");
 }
 
 //Test level data
@@ -86,11 +93,10 @@ var drawBeat = function(init, phase, color){
 
 //Draws player with x, y, and colors (0-3)
 var drawPlayer = function(x, y, color){
-    var col = [[0, 0, 0], [255, 0, 0], [0, 255, 0], [0, 0, 255]];
+    var col = [character[0], character[1], character[2], character[3], character[4]];
     stroke(0);
     noStroke();
-    fill(col[color][0], col[color][1], col[color][2]);
-    image(character, x+playerXOffset, y+playerYOffset, 12, 12);
+    image(col[color], x+playerXOffset, y+playerYOffset, 12, 12);
 };
 
 //When called will take in level data and play it
