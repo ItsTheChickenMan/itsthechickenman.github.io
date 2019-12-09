@@ -22,6 +22,8 @@ var level1 = [];
 //Player vars (usually I store these in an array, but I did multiple vars for readability)
 var playerX = 200;  //x
 var playerY = 200;  //y
+var playerXOffset = -6;
+var playerYOffset = -6;
 var pcolor;         //color
 var playerPhase = 0;//current phase
 var smoooth = 100;  //health
@@ -79,7 +81,7 @@ var drawPlayer = function(x, y, color){
     stroke(0);
     noStroke();
     fill(col[color][0], col[color][1], col[color][2]);
-    image(character, x, y);
+    image(character, x+playerXOffset, y+playerYOffset, 12, 12);
 };
 
 //When called will take in level data and play it
