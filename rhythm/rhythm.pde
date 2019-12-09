@@ -4,7 +4,7 @@ The actually game will be in Java, and then ported to a Raspberry Pi, but I deci
 Processing because it's so easy to create graphics.
 */
 
-/* @pjs preload="player.png"; */
+/* @pjs preload="assets/player.png"; */
 
 //I don't have everything perfectly annotated, just bear with me for a little while :P
 //Have fun scrolling through and stuff
@@ -72,7 +72,7 @@ var drawPlayer = function(x, y, color){
     stroke(0);
     noStroke();
     fill(col[color][0], col[color][1], col[color][2]);
-    ellipse(x, y, 10, 10);
+    image(character, x, y);
 };
 
 //When called will take in level data and play it
