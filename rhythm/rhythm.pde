@@ -13,15 +13,19 @@ Processing because it's so easy to create graphics.
 //I don't have everything perfectly annotated, just bear with me for a little while :P
 //Have fun scrolling through and stuff
 
-PImage character[];
+PImage characterNeutral;
+PImage characterRed;
+PImage characterGreen;
+PImage characterBlue;
+PImage characterYellow;
 void setup() {
   frameRate(60);
   size( 400, 400 );
-  character[0] = loadImage("assets/characterNeutral.png");
-  character[1] = loadImage("assets/characterRed.png");
-  character[2] = loadImage("assets/characterGreen.png");
-  character[3] = loadImage("assets/characterBlue.png");
-  character[4] = loadImage("assets/characterYellow.png");
+  characterNeutral = loadImage("assets/characterNeutral.png");
+  characterRed = loadImage("assets/characterRed.png");
+  characterGreen = loadImage("assets/characterGreen.png");
+  characterBlue = loadImage("assets/characterBlue.png");
+  characterYellow = loadImage("assets/characterYellow.png");
 }
 
 //Test level data
@@ -93,7 +97,7 @@ var drawBeat = function(init, phase, color){
 
 //Draws player with x, y, and colors (0-3)
 var drawPlayer = function(x, y, color){
-    var col = [character[0], character[1], character[2], character[3], character[4]];
+    var col = [characterNeutral, characterRed, characterGreen, characterBlue, characterYellow];
     stroke(0);
     noStroke();
     image(col[color], x+playerXOffset, y+playerYOffset, 12, 12);
