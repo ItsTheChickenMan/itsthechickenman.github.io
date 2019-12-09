@@ -9,8 +9,8 @@ Processing because it's so easy to create graphics.
 //I don't have everything perfectly annotated, just bear with me for a little while :P
 //Have fun scrolling through and stuff
 
+PImage character;
 void setup() {
-  PImage character;
   frameRate(60);
   size( 400, 400 );
   character = loadImage("assets/character.png");
