@@ -189,7 +189,7 @@ void setup() {
   PImage character;
   frameRate(60);
   size( 400, 400 );
-  character = loadImage("player.png");
+  character = loadImage("character.png");
 }
 //Ah, yes.  The draw() function.  The apple of the eye of Processing, the thing that seperates it from just another event-based, javascript-like programming language.  This is, of course, where the game() function is efficiently recalled at 60 executions per second.  Enjoy.
 void draw () {
