@@ -124,32 +124,32 @@ var level = function(levelData){
         drawBeat(pos, levelData[currentBeat][1], levelData[currentBeat][2]);
         pos += levelData[currentBeat][0];
     } else if(smoooth <= 0){
-        print("[");
+        print("!");
         for(var i = 0; i < level1.length; i++){
-            print("[");
+            print("!");
             for(var c = 0; c < 4; c++){
                 print(level1[i][c]);
-                if(c === 3){}else {print(",");}
+                if(c === 3){}else {print("%");}
             }
-            print("]");
-            if(i === level1.length - 1){}else{print(",");}
+            print("&");
+            if(i === level1.length - 1){}else{print("%");}
         }
-        print("]");
+        print("&");
         println("YOU LOSE!  Here's the data, if you want to try again.");
         println("Just paste it into level1 at the top of the code.");
         levelEnd = 1;
     } else {
-        print("[");
+        print("!");
         for(var i = 0; i < level1.length; i++){
-            print("[");
+            print("!");
             for(var c = 0; c < 4; c++){
                 print(level1[i][c]);
-                if(c === 3){}else {print(",");}
+                if(c === 3){}else {print("%");}
             }
-            print("]");
-            if(i === level1.length - 1){}else{print(",");}
+            print("&");
+            if(i === level1.length - 1){}else{print("%");}
         }
-        print("]");
+        print("&");
         println("You won!  Level data above");
         levelEnd = 1;
     }
