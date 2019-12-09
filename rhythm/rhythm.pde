@@ -4,7 +4,7 @@ The actually game will be in Java, and then ported to a Raspberry Pi, but I deci
 Processing because it's so easy to create graphics.
 */
 
-/* @pjs preload="assets/player.png"; */
+/* @pjs preload="assets/character.png"; */
 
 //I don't have everything perfectly annotated, just bear with me for a little while :P
 //Have fun scrolling through and stuff
