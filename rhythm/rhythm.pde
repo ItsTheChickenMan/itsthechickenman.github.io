@@ -9,11 +9,12 @@ Processing because it's so easy to create graphics.
 //I don't have everything perfectly annotated, just bear with me for a little while :P
 //Have fun scrolling through and stuff
 
-PImage character;
+PImage character[];
 void setup() {
   frameRate(60);
   size( 400, 400 );
-  character = loadImage("assets/character.png");
+  character[0] = loadImage("assets/character.png");
+  character[1] = loadImage("assets/charcater.png");
 }
 
 //Test level data
@@ -48,6 +49,14 @@ var randomLevel = function(length, out, difficulty){
         out[i][3] = floor(random(0, 60));
     }
 };
+
+var readMapData = function(map){
+    byte mapData[] = loadBytes("maps/" + map);
+    for(var i = 0; i < mapData.length; i++){
+        int b = mapData[i] & 0xff;
+        
+    }
+}
 //Updates background
 var drawScreen = function(){
     background(255, 255, 255);
