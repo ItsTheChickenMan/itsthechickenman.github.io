@@ -41,6 +41,9 @@ var playerPhase = 0;//current phase
 var smoooth = 100;  //health
 var levelEnd = 0;   //is the level over?
 
+//Other vars
+var neatmapVersion = 1;
+
 //Key handlers
 var keys = [];
 keys[37] = 0;
@@ -62,10 +65,18 @@ var randomLevel = function(length, out, difficulty){
 };
 
 var readMapData = function(map){
+    var header = "420ELMAO:Neatmap v" + neatmapVersion + "!!:";
     byte mapData[] = loadBytes("maps/" + map);
     for(var i = 0; i < mapData.length; i++){
-        int b = mapData[i] & 0xff;
-        
+        for(var a = 0; a < header.length; a++){
+            if(mapData[a] !== (byte(header[a]) & 0xff)){
+                 println("Unable to load neatmap: header was obstructed or out of date");
+            }
+        }
+        var fetchBeat = 0;
+        var fetchDat = 0;
+        var b = mapData[i] & 0xff;
+        level1[fetchBeat][fetchDat] = b;
     }
 }
 //Updates background
