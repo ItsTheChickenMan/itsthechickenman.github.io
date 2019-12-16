@@ -67,7 +67,10 @@ var randomLevel = function(length, out, difficulty){
 var readMapData = function(map){
     var header = "420ELMAO:Neatmap v" + neatmapVersion + "!!:";
     byte mapData[] = loadBytes(map);
-    println(mapData);
+    for(var f = 0; f < header.length; f++){
+      print(byte(header[f]);
+      print(", ");
+    }
     var stoopid = [];
     var stoopidIndex = 0;
     for(var a = 0; a < header.length; a++){
