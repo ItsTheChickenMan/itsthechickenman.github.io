@@ -42,7 +42,7 @@ var smoooth = 100;  //health
 var levelEnd = 0;   //is the level over?
 
 //Other vars
-var neatmapVersion = 1;
+var neatmapVersion = "1";
 
 //Key handlers
 var keys = [];
