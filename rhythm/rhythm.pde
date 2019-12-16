@@ -185,7 +185,7 @@ var level = function(levelData){
 
 //The main game.  Normally I would just drop this into the draw function, but for this I'll keep it it's own seperate thing.  This handles key presses, the levels + data, and some other stuff
 
-randomLevel(50, level1, 5);
+readMapData("test.nmp");
 var game = function(){
     var twoKey = false;
     pcolor = 0;
