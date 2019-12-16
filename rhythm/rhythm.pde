@@ -29,7 +29,7 @@ void setup() {
 }
 
 //Test level data
-var level1 = [];
+var level1 = [[]];
 
 //Player vars (usually I store these in an array, but I did multiple vars for readability)
 var playerX = 200;  //x
@@ -69,6 +69,7 @@ var readMapData = function(map){
     byte mapData[] = loadBytes(map);
     var stoopid = [];
     var stoopidIndex = 0;
+    for(var f = 0; a < header.length;
     for(var a = 0; a < header.length; a++){
         if(mapData[a] !== byte(header[a])){
              println("Unable to load neatmap: header was obstructed or out of date");
