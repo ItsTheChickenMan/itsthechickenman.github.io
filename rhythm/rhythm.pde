@@ -67,16 +67,33 @@ var randomLevel = function(length, out, difficulty){
 var readMapData = function(map){
     var header = "420ELMAO:Neatmap v" + neatmapVersion + "!!:";
     byte mapData[] = loadBytes("maps/" + map);
-    for(var i = 0; i < mapData.length; i++){
-        for(var a = 0; a < header.length; a++){
-            if(mapData[a] !== (byte(header[a]) & 0xff)){
-                 println("Unable to load neatmap: header was obstructed or out of date");
-            }
+    var stoopid = [];
+    var stoopidIndex = 0;
+    for(var a = 0; a < header.length; a++){
+        if(mapData[a] !== (byte(header[a]) & 0xff)){
+             println("Unable to load neatmap: header was obstructed or out of date");
         }
+    }
+    for(var i = 0; i < mapData.length; i++){
         var fetchBeat = 0;
         var fetchDat = 0;
         var b = mapData[i] & 0xff;
-        level1[fetchBeat][fetchDat] = b;
+        if(b === 33){
+          fetchBeat++;
+        } else if(b === 37) {
+          var stooString;
+          for(var c = 0; c < stoopid.length; c++){
+            stooString += stoopid[c];
+          }
+          var dat = int(stooString);
+          level1[fetchBeat][fetchDat] = dat;
+          stoopidIndex = 0;
+          stoopid = [];
+          fetchDat++;
+        } else {
+          stoopid[stoopidIndex]=b;
+          stoopidIndex++;
+        }
     }
 }
 //Updates background
