@@ -72,6 +72,7 @@ var readMapData = function(map){
       print(", ");
     }*/
     println(byte("E"));
+    println(byte("E")&0xff);
     var stoopid = [];
     var stoopidIndex = 0;
     for(var a = 0; a < header.length; a++){
