@@ -69,7 +69,6 @@ var readMapData = function(map){
     byte mapData[] = loadBytes(map);
     var stoopid = [];
     var stoopidIndex = 0;
-    for(var f = 0; a < header.length;
     for(var a = 0; a < header.length; a++){
         if(mapData[a] !== byte(header[a])){
              println("Unable to load neatmap: header was obstructed or out of date");
