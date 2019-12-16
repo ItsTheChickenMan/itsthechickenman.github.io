@@ -68,7 +68,7 @@ var readMapData = function(map){
     var header = "420ELMAO:Neatmap v" + neatmapVersion + "!!:";
     byte mapData[] = loadBytes(map);
     for(var f = 0; f < header.length; f++){
-      print(byte(header[f]);
+      print(byte(header[f]));
       print(", ");
     }
     var stoopid = [];
