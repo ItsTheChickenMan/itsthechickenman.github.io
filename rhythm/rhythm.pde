@@ -77,7 +77,7 @@ var readMapData = function(map){
     for(var i = 0; i < mapData.length; i++){
         var fetchBeat = 0;
         var fetchDat = 0;
-        var b = mapData[i] & 0xff;
+        var b = mapData[i];
         if(b === 33){
           fetchBeat++;
         } else if(b === 37) {
