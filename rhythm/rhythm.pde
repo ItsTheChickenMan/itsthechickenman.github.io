@@ -95,6 +95,7 @@ var readMapData = function(map){
           stoopidIndex++;
         }
     }
+    println(level1);
 }
 //Updates background
 var drawScreen = function(){
