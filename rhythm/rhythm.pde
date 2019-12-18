@@ -142,10 +142,11 @@ var pos = -300;    //If you want a delay at the start, change this
 var level = function(levelData){
     if(pos >= 200 && smoooth > 0){
         if(playerPhase !== levelData[currentBeat][1]){
-            smoooth -= 5;
+            smoooth -= 6;
         } else if(pcolor !== levelData[currentBeat][2]){
-            smoooth -= 2;
+            smoooth -= 3;
         }
+        smoooth++;
         currentBeat++;
         pos = 0 - levelData[currentBeat - 1][3];
     }
