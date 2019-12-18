@@ -112,7 +112,7 @@ var drawScreen = function(){
     } else {
       stroke(200, 0, 0);
     }
-    arc(200, 200, 100, 100, radians(270), radians(smoooth/360));
+    arc(200, 200, 100, 100, radians(((200-smoooth)/100)*360-450), radians(270));
     stroke(0);
     strokeWeight(1);
     fill(255, 255, 255);
