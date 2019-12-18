@@ -103,6 +103,16 @@ var drawScreen = function(){
     fill(255, 0, 0);
     textSize(35);
     text(smoooth, 70, 40);
+    noFill();
+    strokeWeight(5);
+    if(smoooth > 50){
+      fill(0, 200, 0);
+    } else if(smooth > 30){
+      fill(255, 165, 0);
+    } else {
+      fill(200, 0, 0);
+    }
+    arc(200, 200, 190, 190, rad(270), rad(smoooth/360));
     stroke(0);
     fill(255, 255, 255);
     ellipse(200, 200, 200, 200);
