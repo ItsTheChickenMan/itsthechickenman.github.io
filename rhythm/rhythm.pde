@@ -107,7 +107,7 @@ var drawScreen = function(){
     strokeWeight(5);
     if(smoooth > 50){
       stroke(0, 200, 0);
-    } else if(smooth > 30){
+    } else if(smoooth > 30){
       stroke(255, 165, 0);
     } else {
       stroke(200, 0, 0);
