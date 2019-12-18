@@ -100,9 +100,6 @@ var readMapData = function(map){
 //Updates background
 var drawScreen = function(){
     background(255, 255, 255);
-    fill(255, 0, 0);
-    textSize(35);
-    text(smoooth, 70, 40);
     strokeWeight(1);
     stroke(0);
     fill(255, 255, 255);
@@ -160,7 +157,7 @@ var level = function(levelData){
         } else if(pcolor !== levelData[currentBeat][2]){
             smoooth -= 3;
         }
-        smoooth++;
+        if(smoooth < 100){smoooth++;}
         currentBeat++;
         pos = 0 - levelData[currentBeat - 1][3];
     }
