@@ -103,6 +103,9 @@ var drawScreen = function(){
     fill(255, 0, 0);
     textSize(35);
     text(smoooth, 70, 40);
+    strokeWeight(1);
+    fill(255, 255, 255);
+    ellipse(200, 200, 200, 200);
     noFill();
     strokeWeight(5);
     if(smoooth > 50){
@@ -113,10 +116,6 @@ var drawScreen = function(){
       stroke(200, 0, 0);
     }
     arc(200, 200, 100, 100, radians(((200-smoooth)/100)*360-450), radians(270));
-    stroke(0);
-    strokeWeight(1);
-    fill(255, 255, 255);
-    ellipse(200, 200, 200, 200);
 };
 
 //Draws beat, init defines position, phase defines which beat (1-8), and color defines the color (1-3)
