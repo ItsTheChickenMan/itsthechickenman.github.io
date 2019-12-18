@@ -29,7 +29,7 @@ void setup() {
 }
 
 //Test level data
-var level1 = [[]];
+var level1 = [];
 
 //Player vars (usually I store these in an array, but I did multiple vars for readability)
 var playerX = 200;  //x
@@ -186,7 +186,7 @@ var level = function(levelData){
 
 //The main game.  Normally I would just drop this into the draw function, but for this I'll keep it it's own seperate thing.  This handles key presses, the levels + data, and some other stuff
 
-readMapData("test.nmp");
+randomLevel(30, level1, 5);
 var game = function(){
     var twoKey = false;
     pcolor = 0;
