@@ -106,11 +106,11 @@ var drawScreen = function(){
     noFill();
     strokeWeight(5);
     if(smoooth > 50){
-      fill(0, 200, 0);
+      stroke(0, 200, 0);
     } else if(smooth > 30){
-      fill(255, 165, 0);
+      stroke(255, 165, 0);
     } else {
-      fill(200, 0, 0);
+      stroke(200, 0, 0);
     }
     arc(200, 200, 100, 100, radians(270), radians(smoooth/360));
     stroke(0);
