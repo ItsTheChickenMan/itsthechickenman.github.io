@@ -112,7 +112,7 @@ var drawScreen = function(){
     } else {
       fill(200, 0, 0);
     }
-    arc(200, 200, 190, 190, radians(270), radians(smoooth/360));
+    arc(200, 200, 100, 100, radians(270), radians(smoooth/360));
     stroke(0);
     fill(255, 255, 255);
     ellipse(200, 200, 200, 200);
