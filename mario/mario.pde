@@ -59,8 +59,8 @@ var _ = -1;
 
 //Key handlers
 var keys = [];
-keyPressed = function(){keys[keyCode] = true;};
-keyReleased = function(){keys[keyCode] = false;};
+void keyPressed(){keys[keyCode] = true;};
+void keyReleased(){keys[keyCode] = false;};
 
 //Function to draw a single 8-bit pixel
 var drawPixel = function(x, y, color){
@@ -1546,7 +1546,11 @@ var game = function(){
     }
 };
 
-draw = function() {
+void setup(){
+    size(512, 512);
+}
+
+void draw() {
     try {
         game();
     } catch (z){
