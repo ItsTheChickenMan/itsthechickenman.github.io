@@ -12,7 +12,7 @@ frameRate(60);
 
 //Screen control variables
 var screenSize = 512;
-var pixel = width/256;
+var pixel = screenSize/256;
 var restrictWindow = true; //If you really want to see what it looks like if you don't run it in the proper window size, change this to false
 
 var scroll = 0;
