@@ -6,7 +6,7 @@ Thank you very much for playing and enjoy the result of a month of my life spent
 */
 
 //Screen control variables
-var screenSize = 1024;
+var screenSize = 768;
 var pixel = screenSize/256;
 var restrictWindow = true; //If you really want to see what it looks like if you don't run it in the proper window size, change this to false
 
