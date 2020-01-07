@@ -1532,7 +1532,6 @@ var malario = new Player();
 var game = function(){
     background(palette[3]);
     drawLevel(malario, panels);
-    checkScreen();
     if(malario.scroll <= 3136){
         malario.input(panels);
         if(width === 512 || !restrictWindow){
