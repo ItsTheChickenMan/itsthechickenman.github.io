@@ -1280,6 +1280,7 @@ var Player = function(){
     this.x = 64;
     this.size = 0;
     this.y = pixel*208-(this.size*32);
+    println(this.y);
     this.scroll = 0;
     this.playerState = "neutralRight";
     this.run = 0;
