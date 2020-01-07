@@ -5,11 +5,6 @@ This was made as a Christmas present for my Dad
 Thank you very much for playing and enjoy the result of a month of my life spent recreating sprites to the pixel 
 */
 
-/**THANK YOU VERY MUCH TO WILL (@Beorn2018) FOR TEACHING ME HOW TO TURN THE SPRITES TO IMAGES TO REDUCE LAG**/
-
-//Feel free to change the fps as needed below (60 recommended):
-frameRate(60);
-
 //Screen control variables
 var screenSize = 512;
 var pixel = screenSize/256;
@@ -1548,6 +1543,7 @@ var game = function(){
 
 void setup(){
     size(512, 512);
+    frameRate(60);
 }
 
 void draw() {
