@@ -254,10 +254,11 @@ var player = {
     }
 };
 
+var cube = Cube(-50, -50, -1050, 100, 100, 100);
+var cube1 = Cube(-250, -50, -1050, 100, 100, 100);
+  
 void setup(){
   size(1000, 800);
-  var cube = Cube(-50, -50, -1050, 100, 100, 100);
-  var cube1 = Cube(-250, -50, -1050, 100, 100, 100);
 }
 
 void draw() {
