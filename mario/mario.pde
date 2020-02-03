@@ -14,26 +14,6 @@ var scroll = 0;
 
 var cOrrUPt = false;  //Haha don't change this
 
-//I made this a function to make the game function look neater
-var printText = true;
-var checkScreen = function(){
-    if((width !== 512 || height !== 512) && printText && restrictWindow){
-        background(0, 0, 0);
-        fill(255, 255, 255);
-        textAlign(CENTER);
-        textSize(25);
-        text("Hey there!\nThis program needs to be run in a\n512px by 512px window.\nKhanacademy doesn't allow custom\nsizes (outside of 400, 500, or 600),\nso please copy and paste the link below\nto get the proper size.  Thanks!\n|\n|\nv", 250, 100);
-        println("https://www.khanacademy.org/computer-programming/sidescroller/6442667034509312?width=512&height=512");
-        printText = false;
-    } else if(width !== 512 && restrictWindow){
-        background(0, 0, 0);
-        fill(255, 255, 255);
-        textAlign(CENTER);
-        textSize(25);
-        text("Hey there!\nThis program needs to be run in a\n512px by 512px window.\nKhanacademy doesn't allow custom\nsizes (outside of 400, 500, or 600),\nso please copy and paste the link below\nto get the proper size.  Thanks!\n|\n|\nv", 250, 100);
-    }
-};
-
 /* Color palette (fun fact! 8-bit games only supported a color palette of 256 colors, but this level only uses twelve of them):
 0 - black, 
 1 - Brown, 
@@ -1533,12 +1513,8 @@ var malario = new Player();
 var game = function(){
     background(palette[3]);
     drawLevel(malario, panels);
-    if(malario.scroll <= 3136){
-        malario.input(panels);
-        if(width === 512 || !restrictWindow){
-            malario.draw();
-        }
-    }
+    malario.input(panels);
+    malario.draw();
 };
 
 void setup(){
