@@ -9,8 +9,8 @@ var renderDistance = 3000;
 
 
 var keys = [];
-void keyPressed(){keys[keyCode]=true;};
-void keyReleased(){keys[keyCode]=false;};
+void keyPressed(){keys[keyCode]=true;}
+void keyReleased(){keys[keyCode]=false;}
 
 var distance3d = function(p0, p1){
     return sqrt(pow(p1.x-p0.x, 2) + pow(p1.y-p0.y, 2) + pow(p1.z-p0.z, 2));
@@ -258,7 +258,7 @@ void setup(){
   size(1000, 800);
   var cube = Cube(-50, -50, -1050, 100, 100, 100);
   var cube1 = Cube(-250, -50, -1050, 100, 100, 100);
-};
+}
 
 void draw() {
     player.input();
@@ -277,12 +277,9 @@ void draw() {
     cube1.draw(player);
     
     popMatrix();
-    fill(255, 0, 0);
-    text(player.yaw, 10, 20);
-    //text(player.pitch, 30, 20);
-};
+}
 
 void mouseDragged(){
     player.yaw -= pmouseX-mouseX;
     player.pitch -= pmouseY-mouseY;
-};
+}
