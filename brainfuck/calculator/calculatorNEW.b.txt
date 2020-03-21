@@ -1,0 +1,9 @@
+[This is a brand-spanking new calculator I started during the Coronavirus quarantine to keep myself active.  It works much better and I'm much prouder to present it.  Here's some notes:
+-Only does addition num1+num2 (ex. 14+13)
+-When using numbers with different digits, add zeroes to make the digit count equal (ex. 0012+3444)
+-Digits which add up to ten (19+18) crash the program (fix later)
+]
+
+-->,[>++++++[<-------->-],]+++[-----[++[-->++]-->+++[--<++]--<-]+++++[-----<++++
++]-----<[++[-->++]-->++++++[-----<+++++]-----<-]>[[<+>-]>]>[<<+>>-]<<<+++++]>>>>
+[>++++++[<++++++++>-]<.>>]
