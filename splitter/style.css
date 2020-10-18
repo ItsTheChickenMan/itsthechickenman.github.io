@@ -1,0 +1,7 @@
+#segment-box-div {
+  border-style: solid;
+  border-width: 1px;
+  border-color: gray;
+  width: 90%;
+  height: 500px;
+}
