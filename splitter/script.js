@@ -6,6 +6,7 @@ let prevButton = document.getElementById("prev-segment-button");
 let copyButton = document.getElementById("copy-segment-button");
 let segmentContent = document.getElementById("segment-box-div");
 let segmentCount = document.getElementById("segment-count-p");
+let currentSegment = document.getElementById("current-segment-p");
 
 let segments = [];
 let segment = 0;
@@ -25,17 +26,23 @@ function splitButtonClick(e){
 
   segmentCount.innerHTML = "Segments: " + segments.length;
 
+  setCurrentDisplay(segment);
+
   displaySegment(segment);
 }
 
 function nextButtonClick(e){
   if(segment < segments.length-1) segment++;
 
+  setCurrentDisplay(segment);
+
   displaySegment(segment);
 }
 
 function prevButtonClick(e){
   if(segment > 0) segment --;
+
+  setCurrentDisplay(segment);
 
   displaySegment(segment);
 }
@@ -74,7 +81,25 @@ function split(text, amount){
     }
   }
 
+  if(!checkCharacters(segs, amount)){
+    segs = [["While splitting your text, the splitter added too many characters to a segment.  Try running again, removing two-byte characters, or contacting the developer."]];
+  }
+
   return segs;
+}
+
+function checkCharacters(segments, limit){
+  for(let i = 0; i < segments.length; i++){
+    if(segments[i].length-1 > limit){
+      return false;
+    }
+  }
+
+  return true;
+}
+
+function setCurrentDisplay(s){
+  currentSegment.innerHTML = "Current Segment: " + (s+1);
 }
 
 function displaySegment(index){
