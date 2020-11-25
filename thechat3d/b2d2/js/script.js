@@ -1,4 +1,5 @@
 // beats 2 die 2
+console.log("Thanks for checking out Beats 2 Die 2\nbunch of errors below haha");
 
 // main
 let pl = createPlaylist(document.getElementById("pl-div"));
