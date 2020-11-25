@@ -158,11 +158,15 @@ function createTrack(element, data, type){
         pauseButton.style["border-width"] = "0px";
         pauseButton.style["margin-left"] = "5px";
         pauseButton.style["margin-right"] = "5px";
-
+	
+	let container = document.createElement("div");
+	
+        container.appendChild(playButton);
+        container.appendChild(pauseButton);
+	
         this.element.textContent = this.title + " - " + this.author + warning;
-
-        this.element.appendChild(playButton);
-        this.element.appendChild(pauseButton);
+      	
+	this.element.appendChild(container);
       }
     },
 
