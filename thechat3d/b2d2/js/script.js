@@ -18,6 +18,8 @@ tracksRequest.onreadystatechange = function(){
 
 tracks = getTracks();
 
+pl.addTracks(tracks);
+
 // function defs //
 
 // playlist class
