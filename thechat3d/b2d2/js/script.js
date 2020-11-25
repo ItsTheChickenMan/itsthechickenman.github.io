@@ -136,7 +136,7 @@ function createTrack(element, data, type){
 
         playButton.style["height"] = '54px';
         playButton.style["width"] = "90px";
-	playButton.style["display"] = "block";
+	playButton.style["display"] = "inline";
         playButton.style["background"] = "lightgray url(css/play.png) no-repeat";
         playButton.style["background-position"] = "center";
         playButton.style["background-size"] = "50px 50px";
@@ -152,6 +152,7 @@ function createTrack(element, data, type){
 
         pauseButton.style["height"] = '54px';
         pauseButton.style["width"] = "90px";
+	pauseButton.style["display"] = "inline";
         pauseButton.style["background"] = "lightgray url(css/pause.png) no-repeat";
         pauseButton.style["background-position"] = "center";
         pauseButton.style["background-size"] = "50px 50px";
