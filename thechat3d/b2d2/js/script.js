@@ -1,5 +1,4 @@
 // beats 2 die 2
-console.log("Thanks for checking out Beats 2 Die 2\nbunch of errors below haha");
 
 // main
 let pl = createPlaylist(document.getElementById("pl-div"));
@@ -137,6 +136,7 @@ function createTrack(element, data, type){
 
         playButton.style["height"] = '54px';
         playButton.style["width"] = "90px";
+	playButton.style["display"] = "block";
         playButton.style["background"] = "lightgray url(css/play.png) no-repeat";
         playButton.style["background-position"] = "center";
         playButton.style["background-size"] = "50px 50px";
