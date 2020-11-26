@@ -19,8 +19,6 @@ function createYTAudio(id){
         let getAdaptiveFormats = playerResponse.streamingData.adaptiveFormats;
         let findAudioInfo = getAdaptiveFormats.findIndex(obj => obj.audioQuality);
         
-        console.log(getAdaptiveFormats[0].url);
-
         // get the URL for the audio file
         let audioURL = getAdaptiveFormats[findAudioInfo].url;
         
