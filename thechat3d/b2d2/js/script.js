@@ -4,7 +4,7 @@
 let pl = createPlaylist(document.getElementById("pl-div"));
 let tracks;
 
-let tracksRequest = new XMLHttpRequest();
+/*let tracksRequest = new XMLHttpRequest();
 
 tracksRequest.onreadystatechange = function(){
   if(this.readyState == 4 && this.status == 200){
@@ -17,7 +17,9 @@ tracksRequest.onreadystatechange = function(){
 } 
 
 tracksRequest.open("GET", "tracks/tracks.json", false);
-tracksRequest.send();
+tracksRequest.send();*/
+
+tracks = getTracks();
 
 // function defs //
 
