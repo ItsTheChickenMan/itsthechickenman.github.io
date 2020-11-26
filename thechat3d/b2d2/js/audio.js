@@ -5,16 +5,16 @@ function createYTAudio(id){
   let audioElement = document.createElement("audio");
 
   // Fetch video info (using a proxy if avoid CORS errors)
-  return fetch('https://cors-anywhere.herokuapp.com/' + "https://www.youtube.com/get_video_info?video_id=" + id).then(response => {
+  return promiseTimeout(4000, fetch('https://cors-anywhere.herokuapp.com/' + "https://www.youtube.com/get_video_info?video_id=" + id)).then(response => {
     if (response.ok) {
       return response.text().then(ytData => {
         // parse response to find audio info
         ytData = parse_str(ytData);
         let playerResponse = JSON.parse(ytData.player_response);
 
-        /*if(playerResponse.playabilityStatus.status == "UNPLAYABLE"){
+        if(playerResponse.playabilityStatus.status == "UNPLAYABLE"){
           return 1000;
-        }*/
+        }
 
         let getAdaptiveFormats = playerResponse.streamingData.adaptiveFormats;
         let findAudioInfo = getAdaptiveFormats.findIndex(obj => obj.audioQuality);
@@ -32,6 +32,10 @@ function createYTAudio(id){
     } else {
       return response.status;
     }
+  })
+  .catch(err => {
+    console.log(err);
+    return err;
   });
 }
 
@@ -51,4 +55,14 @@ function parse_str(str) {
     params[paramSplit[0]] = paramSplit[1];
     return params;
   }, {});
+}
+
+function promiseTimeout(timeout, promise){
+  let timeoutPromise = new Promise((resolve, reject) => {
+    let tm = window.setTimeout(() => {
+      reject("Promise timed out in " + timeout + "ms");
+    }, timeout);
+  });
+
+  return Promise.race([timeoutPromise, promise]);
 }

@@ -1,36 +1,15 @@
 function getTracks(){
-  return {
-		youtube: [
-			{
-				title: 'Life\'s Been Good',
-				author: 'Joe Walsh',
-				id: 'BXWvKDSwvls',
-				length: '7m56s',
-				audioURL: ''
-			},
-			{
-				title: 'Mr. Blue Sky',
-				author: 'Electric Light Orchestra',
-				id: 's7dTBoW5H9k',
-				length: '5m4s',
-				audioURL: ''
-			},
-			{
-				title: 'Cunk',
-				author: 'Jack Stauber',
-				id: 'PvSCGXWzurI',
-				length: '2m36s',
-				audioURL: ''
-			},
-			{
-				title: 'Gettin\' My Mom On',
-				author: 'Jack Stauber',
-				id: 'tEDFu0PsIkw',
-				length: '2m7s'
-			}
-		],
-		files: []
-	}
+  let xhttp = new XMLHttpRequest();
+
+  xhttp.onreadystatechange = function(){
+    if(this.readyState == 4 && this.status == 200){
+      let json = JSON.parse(this.responseText);
+
+      
+    }
+  } 
+
+  return xhttp;
 }
 
 /*function getTracks(){

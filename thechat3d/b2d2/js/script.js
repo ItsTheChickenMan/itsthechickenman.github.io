@@ -4,7 +4,7 @@
 let pl = createPlaylist(document.getElementById("pl-div"));
 let tracks;
 
-/*let tracksRequest = new XMLHttpRequest();
+let tracksRequest = new XMLHttpRequest();
 
 tracksRequest.onreadystatechange = function(){
   if(this.readyState == 4 && this.status == 200){
@@ -14,11 +14,10 @@ tracksRequest.onreadystatechange = function(){
   
     pl.addTracks(tracks);
   }
-}*/
+} 
 
-tracks = getTracks();
-
-pl.addTracks(tracks);
+tracksRequest.open("GET", "tracks/tracks.json", false);
+tracksRequest.send();
 
 // function defs //
 
@@ -89,6 +88,43 @@ function createTrack(element, data, type){
     type: type,
 
     // youtube api functions
+    onPlayerReady: function(){
+      let playButton = document.createElement("button");
+
+      playButton.onclick = function(){
+        this.startPlayer();
+      }.bind(this);
+
+      playButton.style["height"] = '54px';
+      playButton.style["width"] = "90px";
+      playButton.style["background"] = "lightgray url(css/play.png) no-repeat";
+      playButton.style["background-position"] = "center";
+      playButton.style["background-size"] = "50px 50px";
+      playButton.style["border-width"] = "0px";
+      playButton.style["margin-left"] = "5px";
+      playButton.style["margin-right"] = "5px";
+
+      let pauseButton = document.createElement("button");
+
+      pauseButton.onclick = function(){
+        this.pausePlayer();
+      }.bind(this);
+
+      pauseButton.style["height"] = '54px';
+      pauseButton.style["width"] = "90px";
+      pauseButton.style["background"] = "lightgray url(css/pause.png) no-repeat";
+      pauseButton.style["background-position"] = "center";
+      pauseButton.style["background-size"] = "50px 50px";
+      pauseButton.style["border-width"] = "0px";
+      pauseButton.style["margin-left"] = "5px";
+      pauseButton.style["margin-right"] = "5px";
+
+      this.element.textContent = this.title + " - " + this.author + " (Audio Player Unavailable)";
+
+      this.element.appendChild(playButton);
+      this.element.appendChild(pauseButton);
+    },
+
     startPlayer: function(){
       this.audioElement.playVideo();
     },
@@ -103,19 +139,15 @@ function createTrack(element, data, type){
 
     // normal functions
     onAudioReturn: function(audio){
-      let warning = "";
-      
       if(typeof audio == "object"){
         this.audioElement = audio;
         this.audioElement.controls = true;
         this.audioElement.style["display"] = "block";
 
-        this.element.textContent = this.title + " - " + this.author + warning;
+        this.element.textContent = this.title + " - " + this.author;
         this.element.appendChild(this.audioElement);
       } else {
         // if we reach quota or something, we have to load it in an iframe and add controls manually (very dumb and stupid)
-        warning = " (Audio Player Unavailable)";
-
         let playerElement = document.createElement("div");
         playerElement.id = this.identifier + "-player";
         playerElement.style["display"] = "none";
@@ -125,49 +157,10 @@ function createTrack(element, data, type){
           height: '390',
           width: '640',
           videoId: this.id,
-          events: {}
+          events: {
+            onReady: this.onPlayerReady.bind(this)
+          }
         });
-
-        let playButton = document.createElement("button");
-
-        playButton.onclick = function(){
-          this.startPlayer();
-        }.bind(this);
-
-        playButton.style["height"] = '54px';
-        playButton.style["width"] = "90px";
-	playButton.style["display"] = "inline";
-        playButton.style["background"] = "lightgray url(css/play.png) no-repeat";
-        playButton.style["background-position"] = "center";
-        playButton.style["background-size"] = "50px 50px";
-        playButton.style["border-width"] = "0px";
-        playButton.style["margin-left"] = "5px";
-        playButton.style["margin-right"] = "5px";
-
-        let pauseButton = document.createElement("button");
-
-        pauseButton.onclick = function(){
-          this.pausePlayer();
-        }.bind(this);
-
-        pauseButton.style["height"] = '54px';
-        pauseButton.style["width"] = "90px";
-	pauseButton.style["display"] = "inline";
-        pauseButton.style["background"] = "lightgray url(css/pause.png) no-repeat";
-        pauseButton.style["background-position"] = "center";
-        pauseButton.style["background-size"] = "50px 50px";
-        pauseButton.style["border-width"] = "0px";
-        pauseButton.style["margin-left"] = "5px";
-        pauseButton.style["margin-right"] = "5px";
-	
-	let container = document.createElement("div");
-	
-        container.appendChild(playButton);
-        container.appendChild(pauseButton);
-	
-        this.element.textContent = this.title + " - " + this.author + warning;
-      	
-	this.element.appendChild(container);
       }
     },
 

@@ -1,7 +1,7 @@
 {
-	"youtube": [
+  "youtube": [
     {
-			"title": "Life's Been Good",
+      "title": "Life's Been Good",
       "author": "Joe Walsh",
       "id": "BXWvKDSwvls",
       "length": "7m56s",
@@ -13,21 +13,21 @@
       "id": "s7dTBoW5H9k",
       "length": "5m4s",
       "audioURL": ""
-    },
+    }
+  ],
+  "files": [
     {
       "title": "Cunk",
       "author": "Jack Stauber",
-      "id": "PvSCGXWzurI",
+      "id": "tracks/cunk.mp3",
       "length": "2m36s",
       "audioURL": ""
-    },  
+    },
     {
       "title": "Gettin' My Mom On",
       "author": "Jack Stauber",
-      "id": "tEDFu0PsIkw",
+      "id": "tracks/gettinmymomon.mp3",
       "length": "2m7s"
     }
-	],
-  "files": [
   ]
 }
