@@ -99,8 +99,8 @@ function createTrack(element, data, type){
         this.startPlayer();
       }.bind(this);
 
-      playButton.style["height"] = '54px';
-      playButton.style["width"] = "90px";
+      playButton.style["height"] = '51px';
+      playButton.style["width"] = "85px";
       playButton.style["background"] = "lightgray url(css/play.png) no-repeat";
       playButton.style["background-position"] = "center";
       playButton.style["background-size"] = "50px 50px";
@@ -114,8 +114,8 @@ function createTrack(element, data, type){
         this.pausePlayer();
       }.bind(this);
 
-      pauseButton.style["height"] = '54px';
-      pauseButton.style["width"] = "90px";
+      pauseButton.style["height"] = '51px';
+      pauseButton.style["width"] = "85px";
       pauseButton.style["background"] = "lightgray url(css/pause.png) no-repeat";
       pauseButton.style["background-position"] = "center";
       pauseButton.style["background-size"] = "50px 50px";
