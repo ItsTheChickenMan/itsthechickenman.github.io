@@ -21,6 +21,8 @@ tracksRequest.send();*/
 
 tracks = getTracks();
 
+pl.addTracks(tracks);
+
 // function defs //
 
 // playlist class
