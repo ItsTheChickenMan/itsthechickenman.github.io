@@ -14,13 +14,6 @@ function getTracks(){
         id: 's7dTBoW5H9k',
         length: '5m4s',
         audioURL: ''
-      },
-      {
-        title: 'Buttercup',
-        author: 'Jack Stauber',
-        id: 'eYDI8b5Nn5s',
-        length: '3m28s',
-        audioURL: ''
       }
     ],
     files: [
