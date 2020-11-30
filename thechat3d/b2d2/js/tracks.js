@@ -14,6 +14,13 @@ function getTracks(){
         id: 's7dTBoW5H9k',
         length: '5m4s',
         audioURL: ''
+      },
+      {
+        title: 'Sultans Of Swing',
+        author: 'Dire Straits',
+        id: 'h0ffIJ7ZO4U',
+        length: '4m26s',
+        audioURL: ''
       }
     ],
     files: [
