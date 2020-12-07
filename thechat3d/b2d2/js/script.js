@@ -129,8 +129,8 @@ function createTrack(element, data, type){
         t = t.slice(0, 40) + "...";
       }
 
-      this.element.textContent = this.title + " - " + this.author + " (Audio Player Unavailable)";
-
+      this.element.textContent = t + " (Audio Player Unavailable)";
+ 
       this.element.appendChild(playButton);
       this.element.appendChild(pauseButton);
     },
