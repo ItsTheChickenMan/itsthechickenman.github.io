@@ -21,6 +21,13 @@ function getTracks(){
         id: 'h0ffIJ7ZO4U',
         length: '4m26s',
         audioURL: ''
+      }, 
+      {
+        title: 'All Along The Watchtower',
+        author: 'The Jimi Hendrix Experience',
+        id: 'TLV4_xaYynY',
+        length: '4m1s',
+        audioURL: ''
       }
     ],
     files: [
