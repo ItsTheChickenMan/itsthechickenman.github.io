@@ -37,12 +37,6 @@ function getTracks(){
         id: 'tracks/cunk.mp3',
         length: '2m36s',
         audioURL: ''
-      },
-      {
-        title: 'Gettin\' My Mom On',
-        author: 'Jack Stauber',
-        id: 'tracks/gettinmymomon.mp3',
-        length: '2m7s'
       }
     ]
   };
