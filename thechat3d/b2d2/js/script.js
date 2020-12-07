@@ -123,6 +123,12 @@ function createTrack(element, data, type){
       pauseButton.style["margin-left"] = "5px";
       pauseButton.style["margin-right"] = "5px";
 
+      let t = this.title + " - " + this.author;
+      
+      if(t.length >= 40){
+        t = t.slice(0, 40) + "...";
+      }
+
       this.element.textContent = this.title + " - " + this.author + " (Audio Player Unavailable)";
 
       this.element.appendChild(playButton);
