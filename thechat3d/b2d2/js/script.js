@@ -30,6 +30,7 @@ function createPlaylist(element){
   return {
     element: element,
     tracks: [],
+    playing: "",
 
     addTrack: function(track){
       this.tracks.push(track);
@@ -87,7 +88,7 @@ function createTrack(element, data, type){
     title: data.title,
     author: data.author,
     length: data.length,
-    identifier: data.title.replace(" ", "-"),
+    identifier: data.title.replace(/\s/g, "-"),
     id: data.id, //although referred to as id, this can mean multiple things depending on this.type
     type: type,
 
@@ -123,24 +124,36 @@ function createTrack(element, data, type){
       pauseButton.style["margin-left"] = "5px";
       pauseButton.style["margin-right"] = "5px";
 
-      let t = this.title + " - " + this.author;
+      let controlsDiv = document.createElement("div");
       
-      if(t.length >= 40){
-        t = t.slice(0, 40) + "...";
-      }
+      controlsDiv.appendChild(playButton);
+      controlsDiv.appendChild(pauseButton);
 
-      this.element.textContent = t + " (Audio Player Unavailable)";
+      let text = this.title + " - " + this.author + " (Audio Player Unavailable)";
+
+      let t = cutStringToWidth(text, 425);
+
+      if(t.length < text.length) t += "...";
+
+      this.element.textContent = t;
  
-      this.element.appendChild(playButton);
-      this.element.appendChild(pauseButton);
+      this.element.appendChild(controlsDiv);
     },
 
     startPlayer: function(){
-      this.audioElement.playVideo();
+      if(this.type == "youtube"){
+        this.audioElement.playVideo();
+      } else {
+        this.audioElement.play();
+      }
     },
 
     pausePlayer: function(){
-      this.audioElement.pauseVideo();
+      if(this.type == "youtube"){
+        this.audioElement.pauseVideo();
+      } else {
+        this.audioElement.pause();
+      }
     },
 
     stopPlayer: function(){
@@ -261,6 +274,25 @@ function addTimes(times){
     final = hours + "h" + minutes + "m" + seconds + "s";
   } else {
     final = minutes + "m" + seconds + "s";
+  }
+
+  return final;
+}
+
+// creates a string of a certain width in pixels (attempts to get as close as possible)
+function cutStringToWidth(string, width){
+  let test = document.createElement("div");
+  let final = string;
+
+  let testNode = document.createTextNode(final);
+
+  test.id = "string";
+  test.appendChild(testNode);
+  document.body.appendChild(test);
+
+  while(test.clientWidth > width){
+    final = final.slice(0, final.length-1);
+    testNode.textContent = final;
   }
 
   return final;

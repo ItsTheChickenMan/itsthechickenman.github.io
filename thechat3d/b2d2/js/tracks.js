@@ -30,15 +30,7 @@ function getTracks(){
         audioURL: ''
       }
     ],
-    files: [
-      {
-        title: 'Cunk',
-        author: 'Jack Stauber',
-        id: 'tracks/cunk.mp3',
-        length: '2m36s',
-        audioURL: ''
-      }
-    ]
+    files: []
   };
 }
 
