@@ -21,7 +21,7 @@
     let cowImages = 6;
       
     function cowNextImage(){
-        cowCurrentImage = ( (cowCurrentImage+1) % cowImages) + 1;
+        cowCurrentImage = (cowCurrentImage % cowImages) + 1;
         cowImage.src = "/cow/cow%20(" + cowCurrentImage + ").png";
     }
     
