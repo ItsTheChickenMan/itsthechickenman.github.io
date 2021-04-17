@@ -13,4 +13,18 @@
   <h2>Reviews</h2>
   <p>"8 years in development.  Totally worth it" - me</p>
   <p>"In this game, there are cows" - DinamicDigital</p>
+  <script type="text/javascript">
+    let cowImage = document.getElementById("cow-image");
+    let cowNextImageElement = document.getElementById("cow-next-image");  
+    let cowCurrentImage = 1;
+    let cowImages = 6;
+      
+    function cowNextImage(){
+        cowCurrentImage = ( (++cowCurrentImage) % cowImages) + 1;
+        cowImage.src = "https://itsthechickenman.github.io/cow%20(" + cowCurrentImage + ").png";
+    }
+    
+    cowNextImageElement.onclick = cowNextImage;
+  
+  </script>
 </body>
