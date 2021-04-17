@@ -9,7 +9,7 @@
   <h2>Downloads</h2>
   <p>Windows/Linux v1.0: <a href="https://itsthechickenman.github.io/cow/Cow.zip">Cow.zip</a></p>
   <h2>Images</h2>
-  <img src="/cow%20(1).png" style="width: 550px" id="cow-image">
+  <img src="/cow/cow%20(1).png" style="width: 550px" id="cow-image">
   <a href="#cow-image" id="cow-next-image" style="display: block">Next Image</a>
   <h2>Reviews</h2>
   <p>"8 years in development.  Totally worth it" - me</p>
@@ -21,8 +21,8 @@
     let cowImages = 6;
       
     function cowNextImage(){
-        cowCurrentImage = ( (++cowCurrentImage) % cowImages) + 1;
-        cowImage.src = "https://itsthechickenman.github.io/cow%20(" + cowCurrentImage + ").png";
+        cowCurrentImage = ( (cowCurrentImage+1) % cowImages) + 1;
+        cowImage.src = "/cow/cow%20(" + cowCurrentImage + ").png";
     }
     
     cowNextImageElement.onclick = cowNextImage;
